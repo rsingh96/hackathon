@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Cheeper - better than Twitter</title>
+  </head>
+  <body>
+    <h1>Gimme Sum Werds</h1>
+    <form action='/api/cheep' method="POST">
+	  Enter a keyword:
+	  <input name="gif" type="text" maxlength="76" /> 
+	  <input type="submit" />
+	</form>
+  	<div id="regurgitate">
+  		<h2> Gifs </h2>
+    	{% for gif in gifs %}
+    	<div class="gifs">
+    	<img src= "{{gif}}">
+        	<b>{{ gif }}</b>
+        	<p>{{ gif }}</p>
+    	</div>
+    	{% endfor %}
+  	</div>    
+  </body>
+</html>
